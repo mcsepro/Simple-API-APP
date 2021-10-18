@@ -1,16 +1,16 @@
 const express = require("express");
 
-const multer = require("multer");
+const app = express()
 
-const app = express();
-s
+const imageUpload = require("./imageupload");
+
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: false }));
 
  
 
-app.use("/api/users", require("./controller/routes/api/users"));
+app.use("/users", require("./controller/users"));
 
  
 

@@ -6,7 +6,7 @@ const users = [
   
       name: "John",
   
-      email: "john@gmail.com"
+      email: "john@gmail.com",
 
       photo: null
   
@@ -18,7 +18,7 @@ const users = [
   
       name: "Smith",
   
-      email: "smith@gmail.com"
+      email: "smith@gmail.com",
 
       photo: null
   
@@ -30,7 +30,7 @@ const users = [
   
       name: "Chris",
   
-      email: "chris@gmail.com"
+      email: "chris@gmail.com",
 
       photo: null
   
@@ -42,7 +42,7 @@ const users = [
   
       name: "Jack",
   
-      email: "jack@gmail.com"
+      email: "jack@gmail.com",
 
       photo: null
   
