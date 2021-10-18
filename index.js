@@ -1,15 +1,16 @@
 const express = require("express");
-const multer = require(‘multer’);
+
+const multer = require("multer");
 
 const app = express();
-
+s
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: false }));
 
  
 
-app.use("/api/users", require("./routes/api/users"));
+app.use("/api/users", require("./controller/routes/api/users"));
 
  
 
