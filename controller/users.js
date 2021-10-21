@@ -7,7 +7,7 @@ const multer = require("multer");
 
 const uuid = require("uuid");
 
-const imageUpload = require("../imageupload");
+const Upload = multer({dest:'Uploads/'});
 
 let users = require("../model/users");
 
@@ -38,9 +38,10 @@ router.get("/:id", (req, res) => {
 });
 
  
-router.post("/", (req, res) => {
-
-  const newUser = {
+router.post('/', Upload.single('image'), (req, res,) => {
+  console.log(req.file);
+ 
+  const newUser = ({
 
     id: uuid.v4(),
 
@@ -48,7 +49,7 @@ router.post("/", (req, res) => {
 
     email: req.body.email
 
-  };
+  });
 
  
 
@@ -101,16 +102,6 @@ router.put("/:id", (req, res) => {
   }
 
 });
-
-
-// For Single image upload
-router.post('/uploadImage', imageUpload.single('image'), (req, res) => {
-  res.send(req.file)
-}, (error, req, res, next) => {
-  res.status(400).send({ error: error.message })
-});
-
-
 
 
 //Delete User

@@ -2,8 +2,6 @@ const express = require("express");
 
 const app = express()
 
-const imageUpload = require("./imageupload");
-
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: false }));
